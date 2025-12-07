@@ -41,6 +41,11 @@ const messages = [
     author: "Lelane",
     role: "",
   },
+  {
+    quote: "Dave - What an epic time! We've loved your leadership, energy, humour, insights, care, fun-making and gift of the gab. Thank you for everything you have done and enjoy a well deserved break.",
+    author: "Katie",
+    role: "",
+  },
 ];
 
 const animations = [
