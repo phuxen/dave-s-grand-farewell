@@ -8,9 +8,9 @@ interface FloatingFishProps {
 }
 
 const sizeClasses = {
-  sm: "w-24 h-auto",
-  md: "w-48 h-auto",
-  lg: "w-72 h-auto",
+  sm: "w-48 h-auto",
+  md: "w-96 h-auto",
+  lg: "w-[36rem] h-auto",
 };
 
 const animationClasses = {
