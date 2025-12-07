@@ -138,19 +138,19 @@ export const GallerySection = () => {
 
         <div
           ref={galleryRef}
-          className="perspective-1000 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="perspective-1000 columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6"
         >
           {galleryImages.map((image, index) => (
             <div
               key={image.id}
-              className="gallery-card preserve-3d aspect-[4/3] bg-gradient-to-br from-secondary to-navy-light rounded-2xl overflow-hidden border border-border/50 hover-lift group cursor-pointer"
+              className="gallery-card preserve-3d break-inside-avoid bg-gradient-to-br from-secondary to-navy-light rounded-2xl overflow-hidden border border-border/50 hover-lift group cursor-pointer"
               style={{ transformOrigin: "center center" }}
             >
-              <div className="w-full h-full relative">
+              <div className="w-full relative">
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
