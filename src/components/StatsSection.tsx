@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { FloatingFish } from "./FloatingFish";
 
 const stats = [
@@ -7,6 +7,56 @@ const stats = [
   { value: 56943, label: "Hours streaming football in the studio", suffix: "" },
   { value: 6324, label: "Peroni's consumed", suffix: "🍺" },
 ];
+
+const CountUpNumber = ({ target, suffix }: { target: number; suffix: string }) => {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasStarted]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    const duration = 2000;
+    const steps = 60;
+    const increment = target / steps;
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [hasStarted, target]);
+
+  return (
+    <div ref={ref} className="text-stat text-primary mb-2">
+      {count.toLocaleString()}{suffix}
+    </div>
+  );
+};
 
 export const StatsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -42,9 +92,7 @@ export const StatsSection = () => {
               key={index}
               className="bg-card border-2 border-border p-8 text-center hover-lift rounded-sm"
             >
-              <div className="text-stat text-primary mb-2">
-                {stat.value.toLocaleString()}{stat.suffix}
-              </div>
+              <CountUpNumber target={stat.value} suffix={stat.suffix} />
               <p className="text-body text-foreground text-lg">
                 {stat.label}
               </p>
