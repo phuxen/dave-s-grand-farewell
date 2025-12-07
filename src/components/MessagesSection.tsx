@@ -7,34 +7,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 const messages = [
   {
-    quote: "Dave taught me that every problem can be solved with enough Peroni and optimism.",
-    author: "Sarah M.",
-    role: "Creative Director",
+    quote: "Thank you, Dave, for being such an amazing boss. I can't express enough how grateful I am for the opportunities and support you've given me during your time at DAN. I'm proud of the work we've accomplished together, especially our efforts to support the community through the Fono. It's been an absolute pleasure getting to know you and working under your leadership. I'll never forget what a genuinely great person you are. Ofa lahi atu.",
+    author: "Hulu",
+    role: "",
   },
   {
-    quote: "Never met anyone who could fall asleep in a meeting and still contribute the best idea.",
-    author: "Mike T.",
-    role: "Developer",
+    quote: "Congratulations on prioritizing family time! It takes real courage to step away. We'll figure things out from here—wishing you all the best.",
+    author: "Dan",
+    role: "",
   },
   {
-    quote: "His Fishdom high score is frankly intimidating. Legend.",
-    author: "Emma R.",
-    role: "Designer",
+    quote: "Couldn't have asked for a more awesome Don Boss for my first chaotic stumble into the agency world. Your ridiculous range of skills — synthesising, summarising, abstracting, managing, designing, directing (and somehow staying sane) — has always blown my mind. I'm going to seriously miss you, your leadership, and of course our highly confidential cricket-themed fax correspondence.",
+    author: "Simon",
+    role: "",
   },
   {
-    quote: "Dave's ability to stream football while looking productive is unmatched.",
-    author: "James K.",
-    role: "Project Manager",
+    quote: "Yo Dave Bro, been a blast working with you - go forth and conquer life with your awesome family. They will love having you around - just like we did. Your energetic, intelligent, funny, strategic and caring personality will bring out the best in them - just like it did for us. Thanks for all you did to make work life valuable, insightful and a good time for all of us. I will miss you! Look forward to a beer in the new year. Chur, love & hugs.",
+    author: "Heids",
+    role: "",
   },
   {
-    quote: "You made chaos feel like strategy. We'll miss that.",
-    author: "Lucy W.",
-    role: "Account Manager",
-  },
-  {
-    quote: "Thanks for pretending to understand when I explained code. True leadership.",
-    author: "Tom H.",
-    role: "Senior Developer",
+    quote: "Best boss, you proved to me that a boss can be empathetic, smart, and get shit done at the same time. Huge respect, and I hope wherever your next journey takes you, it fulfills you both mentally and spiritually enough to fill your baldspot.",
+    author: "Billy",
+    role: "",
   },
 ];
 
