@@ -3,16 +3,31 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FloatingFish } from "./FloatingFish";
 
+// Gallery images
+import gallery1 from "@/assets/gallery/DP_HM_AT.jpeg";
+import gallery2 from "@/assets/gallery/DP_AT_HT_TG.jpeg";
+import gallery3 from "@/assets/gallery/DP_and_LF.jpeg";
+import gallery4 from "@/assets/gallery/AI_DP_TG.jpeg";
+import gallery5 from "@/assets/gallery/Friday_lunch_1.jpeg";
+import gallery6 from "@/assets/gallery/Media.jpeg";
+import gallery7 from "@/assets/gallery/Dave_DP.jpeg";
+import gallery8 from "@/assets/gallery/DP_and_espresso.jpeg";
+import gallery9 from "@/assets/gallery/DP_and_screen.jpeg";
+import gallery10 from "@/assets/gallery/DP_the_gardener_with_his_team_1.jpeg";
+
 gsap.registerPlugin(ScrollTrigger);
 
-// Placeholder images - replace with actual Dave photos
 const galleryImages = [
-  { id: 1, placeholder: "Dave at the office" },
-  { id: 2, placeholder: "Team celebration" },
-  { id: 3, placeholder: "Conference moment" },
-  { id: 4, placeholder: "Dave being Dave" },
-  { id: 5, placeholder: "Legendary meeting" },
-  { id: 6, placeholder: "The Peroni years" },
+  { id: 1, src: gallery1, alt: "Dave with the team" },
+  { id: 2, src: gallery2, alt: "Office fun times" },
+  { id: 3, src: gallery3, alt: "Smash room adventures" },
+  { id: 4, src: gallery4, alt: "Silly hats moment" },
+  { id: 5, src: gallery5, alt: "Friday lunch crew" },
+  { id: 6, src: gallery6, alt: "Polaroid memories" },
+  { id: 7, src: gallery7, alt: "Party vibes" },
+  { id: 8, src: gallery8, alt: "Espresso martini time" },
+  { id: 9, src: gallery9, alt: "Meeting mode" },
+  { id: 10, src: gallery10, alt: "Team outing" },
 ];
 
 export const GallerySection = () => {
@@ -99,21 +114,20 @@ export const GallerySection = () => {
               className="gallery-card preserve-3d aspect-[4/3] bg-gradient-to-br from-secondary to-navy-light rounded-2xl overflow-hidden border border-border/50 hover-lift group cursor-pointer"
               style={{ transformOrigin: "center center" }}
             >
-              <div className="w-full h-full flex items-center justify-center relative">
-                {/* Placeholder - replace with actual images */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
-                <span className="text-body text-muted-foreground text-center p-4">
-                  📸 {image.placeholder}
-                </span>
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
+              <div className="w-full h-full relative">
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <p className="text-foreground text-sm font-medium">{image.alt}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
-
-        <p className="text-body text-center mt-12 text-muted-foreground italic">
-          Add your favourite Dave photos here!
-        </p>
       </div>
     </section>
   );
