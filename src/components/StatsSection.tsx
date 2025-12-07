@@ -1,9 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 import { FloatingFish } from "./FloatingFish";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
   { value: 2394, label: "Hours playing Fishdom", suffix: "" },
@@ -12,71 +8,8 @@ const stats = [
   { value: 6324, label: "Peroni's consumed", suffix: "🍺" },
 ];
 
-interface AnimatedCounterProps {
-  target: number;
-  suffix?: string;
-  isVisible: boolean;
-}
-
-const AnimatedCounter = ({ target, suffix = "", isVisible }: AnimatedCounterProps) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    let startTime: number;
-    const duration = 2000;
-
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 4);
-      setCount(Math.floor(eased * target));
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  }, [target, isVisible]);
-
-  return (
-    <span>
-      {count.toLocaleString()}
-      {suffix}
-    </span>
-  );
-};
-
 export const StatsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top 60%",
-        onEnter: () => setIsVisible(true),
-      });
-
-      gsap.from(".stat-card", {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 70%",
-        },
-        y: 100,
-        opacity: 0,
-        rotation: -5,
-        stagger: 0.2,
-        duration: 0.8,
-        ease: "back.out(1.7)",
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
 
   return (
     <section ref={sectionRef} className="relative py-32 px-4 overflow-hidden">
@@ -107,14 +40,10 @@ export const StatsSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="stat-card bg-card border-2 border-border p-8 text-center hover-lift rounded-sm"
+              className="bg-card border-2 border-border p-8 text-center hover-lift rounded-sm"
             >
               <div className="text-stat text-primary mb-2">
-                <AnimatedCounter
-                  target={stat.value}
-                  suffix={stat.suffix}
-                  isVisible={isVisible}
-                />
+                {stat.value.toLocaleString()}{stat.suffix}
               </div>
               <p className="text-body text-foreground text-lg">
                 {stat.label}
