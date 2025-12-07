@@ -22,6 +22,14 @@ import gallery15 from "@/assets/gallery/IMG_5316.jpeg";
 import gallery16 from "@/assets/gallery/IMG_5909_1.jpeg";
 import gallery17 from "@/assets/gallery/Image_2.jpeg";
 import gallery18 from "@/assets/gallery/Image_1.jpeg";
+import gallery19 from "@/assets/gallery/Wine_night.jpeg";
+import gallery20 from "@/assets/gallery/Seaside_view.jpeg";
+import gallery21 from "@/assets/gallery/Workshop_day.jpeg";
+import gallery22 from "@/assets/gallery/Axe_throwing.jpeg";
+import gallery23 from "@/assets/gallery/Boat_party.jpeg";
+import gallery24 from "@/assets/gallery/Squad_goals.jpeg";
+import gallery25 from "@/assets/gallery/Sunset_crew.jpeg";
+import gallery26 from "@/assets/gallery/Sandal_swagger.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +52,14 @@ const galleryImages = [
   { id: 16, src: gallery16, alt: "The matching duo" },
   { id: 17, src: gallery17, alt: "Tropical party" },
   { id: 18, src: gallery18, alt: "Bowling night" },
+  { id: 19, src: gallery19, alt: "Wine night vibes" },
+  { id: 20, src: gallery20, alt: "Seaside wander" },
+  { id: 21, src: gallery21, alt: "Workshop mode" },
+  { id: 22, src: gallery22, alt: "Viking axe throwing" },
+  { id: 23, src: gallery23, alt: "Boat party chaos" },
+  { id: 24, src: gallery24, alt: "Squad goals" },
+  { id: 25, src: gallery25, alt: "Sunset crew" },
+  { id: 26, src: gallery26, alt: "Sandal swagger" },
 ];
 
 export const GallerySection = () => {
