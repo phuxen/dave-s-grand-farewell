@@ -46,11 +46,6 @@ const messages = [
     author: "Katie",
     role: "",
   },
-  {
-    quote: "El Presidente, thank you so much for the dad jokes, questionable stories and chaotic energy that you brought to the studio. It's been so much fun working with you. Beyond the laughs, I'm genuinely grateful for how you've invested in my growth here. Trusting me with the Design Lead role was a huge moment in my career, and your backing has meant everything. Thank you for believing in me and for everything you've done for both DAN and myself.",
-    author: "Hux",
-    role: "",
-  },
 ];
 
 const animations = [
