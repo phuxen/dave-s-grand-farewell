@@ -5,14 +5,14 @@ import teamMemberNew from "@/assets/heads/team_member_new.png";
 import head1 from "@/assets/heads/head_1.png";
 import head2 from "@/assets/heads/head_2.png";
 import head3 from "@/assets/heads/head_3.png";
+import head5 from "@/assets/heads/head_5.jpeg";
 
 const teamMembers = [
-  { name: "Team 1", delay: 0, image: head1 },
-  { name: "Team 2", delay: 0.2, image: head2 },
-  { name: "Team 3", delay: 0.4, image: head3 },
-  { name: "Team 4", delay: 0.6, image: teamMemberNew },
-  { name: "Lucy", delay: 0.8, image: null },
-  { name: "Tom", delay: 1, image: null },
+  { name: "Team 1", delay: 0, image: head1, left: "5%", top: "12%" },
+  { name: "Team 2", delay: 0.2, image: head2, left: "75%", top: "8%" },
+  { name: "Team 3", delay: 0.4, image: head3, left: "85%", top: "55%" },
+  { name: "Team 4", delay: 0.6, image: teamMemberNew, left: "8%", top: "60%" },
+  { name: "Team 5", delay: 0.8, image: head5, left: "45%", top: "75%" },
 ];
 
 export const HeroSection = () => {
@@ -95,13 +95,13 @@ export const HeroSection = () => {
 
       {/* Floating team heads */}
       <div className="absolute inset-0 pointer-events-none">
-        {teamMembers.map((member, index) => (
+        {teamMembers.map((member) => (
           <div
             key={member.name}
-            className="floating-head absolute w-20 h-20 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-primary/30 to-secondary border-2 border-primary/50 flex items-center justify-center text-foreground font-body text-xs md:text-sm animate-float overflow-hidden"
+            className="floating-head absolute w-28 h-28 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-gradient-to-br from-primary/30 to-secondary border-3 border-primary/50 flex items-center justify-center text-foreground font-body text-xs md:text-sm animate-float overflow-hidden shadow-xl"
             style={{
-              left: `${10 + (index % 4) * 25}%`,
-              top: `${15 + Math.floor(index / 4) * 45}%`,
+              left: member.left,
+              top: member.top,
               animationDelay: `${member.delay}s`,
             }}
           >
