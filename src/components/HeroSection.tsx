@@ -1,14 +1,16 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { FloatingFish } from "./FloatingFish";
+import teamMemberNew from "@/assets/heads/team_member_new.png";
 
 const teamMembers = [
-  { name: "Sarah", delay: 0 },
-  { name: "Mike", delay: 0.2 },
-  { name: "Emma", delay: 0.4 },
-  { name: "James", delay: 0.6 },
-  { name: "Lucy", delay: 0.8 },
-  { name: "Tom", delay: 1 },
+  { name: "Sarah", delay: 0, image: null },
+  { name: "Mike", delay: 0.2, image: null },
+  { name: "Emma", delay: 0.4, image: null },
+  { name: "James", delay: 0.6, image: null },
+  { name: "Lucy", delay: 0.8, image: null },
+  { name: "Tom", delay: 1, image: null },
+  { name: "New", delay: 1.2, image: teamMemberNew },
 ];
 
 export const HeroSection = () => {
@@ -94,14 +96,18 @@ export const HeroSection = () => {
         {teamMembers.map((member, index) => (
           <div
             key={member.name}
-            className="floating-head absolute w-20 h-20 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-primary/30 to-secondary border-2 border-primary/50 flex items-center justify-center text-foreground font-body text-xs md:text-sm animate-float"
+            className="floating-head absolute w-20 h-20 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-primary/30 to-secondary border-2 border-primary/50 flex items-center justify-center text-foreground font-body text-xs md:text-sm animate-float overflow-hidden"
             style={{
-              left: `${15 + (index % 3) * 30}%`,
-              top: `${20 + Math.floor(index / 3) * 40}%`,
+              left: `${10 + (index % 4) * 25}%`,
+              top: `${15 + Math.floor(index / 4) * 45}%`,
               animationDelay: `${member.delay}s`,
             }}
           >
-            <span className="opacity-70">{member.name}</span>
+            {member.image ? (
+              <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+            ) : (
+              <span className="opacity-70">{member.name}</span>
+            )}
           </div>
         ))}
       </div>
