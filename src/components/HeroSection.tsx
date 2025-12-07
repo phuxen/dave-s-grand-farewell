@@ -108,25 +108,20 @@ export const HeroSection = () => {
 
       {/* Main content */}
       <div className="relative z-10 text-center">
-        <p
-          ref={subtitleRef}
-          className="text-body text-primary uppercase tracking-[0.3em] text-sm md:text-base mb-4"
-        >
+        <p ref={subtitleRef} className="text-body text-primary uppercase tracking-[0.3em] text-sm md:text-base mb-4">
           A fond farewell to our fearless leader
         </p>
         <h1 ref={textRef} className="text-hero gradient-text">
           LEGEND
         </h1>
         <p className="text-body text-cream-muted text-xl md:text-2xl mt-8 max-w-2xl mx-auto">
-          David Parkison — MD, myth, Fishdom enthusiast
+          David Perkins — MD, myth, Fishdom enthusiast
         </p>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce-subtle">
-        <span className="text-body text-muted-foreground text-sm tracking-wider">
-          Scroll to celebrate
-        </span>
+        <span className="text-body text-muted-foreground text-sm tracking-wider">Scroll to celebrate</span>
         <div className="w-6 h-10 rounded-full border-2 border-primary/50 flex items-start justify-center p-2">
           <div className="w-1.5 h-3 bg-primary rounded-full animate-bounce" />
         </div>
