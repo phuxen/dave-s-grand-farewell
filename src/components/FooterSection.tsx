@@ -53,18 +53,14 @@ export const FooterSection = () => {
 
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <div className="footer-text">
-          <p className="text-body text-primary uppercase tracking-[0.3em] text-sm mb-8">
-            Thank you for everything
-          </p>
+          <p className="text-body text-primary uppercase tracking-[0.3em] text-sm mb-8">Thank you for everything</p>
 
-          <h2 className="text-hero gradient-text mb-8">
-            Cheers, Dave!
-          </h2>
+          <h2 className="text-hero gradient-text mb-8">Cheers, Dave!</h2>
 
           <p className="text-body text-foreground/70 text-xl md:text-2xl mb-12 max-w-2xl mx-auto leading-relaxed">
-            From all of us who you've led, inspired, confused, and entertained. 
+            From all of us who you've led, inspired, confused, and entertained.
             <br />
-            <span className="text-primary">May your retirement be full of Fishdom victories and uninterrupted football.</span>
+            <span className="text-primary">May your time be full of Fishdom victories and uninterrupted football.</span>
           </p>
 
           <div className="flex items-center justify-center gap-4 text-muted-foreground text-sm">
