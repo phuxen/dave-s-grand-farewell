@@ -2,15 +2,17 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { FloatingFish } from "./FloatingFish";
 import teamMemberNew from "@/assets/heads/team_member_new.png";
+import head1 from "@/assets/heads/head_1.png";
+import head2 from "@/assets/heads/head_2.png";
+import head3 from "@/assets/heads/head_3.png";
 
 const teamMembers = [
-  { name: "Sarah", delay: 0, image: null },
-  { name: "Mike", delay: 0.2, image: null },
-  { name: "Emma", delay: 0.4, image: null },
-  { name: "James", delay: 0.6, image: null },
+  { name: "Team 1", delay: 0, image: head1 },
+  { name: "Team 2", delay: 0.2, image: head2 },
+  { name: "Team 3", delay: 0.4, image: head3 },
+  { name: "Team 4", delay: 0.6, image: teamMemberNew },
   { name: "Lucy", delay: 0.8, image: null },
   { name: "Tom", delay: 1, image: null },
-  { name: "New", delay: 1.2, image: teamMemberNew },
 ];
 
 export const HeroSection = () => {
