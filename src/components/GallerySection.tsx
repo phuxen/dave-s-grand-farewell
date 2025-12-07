@@ -114,23 +114,23 @@ export const GallerySection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-32 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-navy-deep via-background to-navy-light/20" />
+    <section ref={sectionRef} className="relative py-32 px-4 overflow-hidden bg-card">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0ibm9uZSIvPgo8Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIxIiBmaWxsPSJyZ2JhKDAsMCwwLDAuMDUpIi8+Cjwvc3ZnPg==')] opacity-50" />
 
       <FloatingFish
-        className="absolute top-20 left-20 opacity-50"
+        className="absolute top-20 left-20 opacity-30"
         size="md"
         variant="fast"
       />
       <FloatingFish
-        className="absolute bottom-40 right-10 opacity-40"
+        className="absolute bottom-40 right-10 opacity-20"
         size="lg"
         variant="alt"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <h2 className="text-section text-center mb-4">
-          The <span className="text-primary italic">Glory</span> Years
+        <h2 className="text-section text-center mb-4 text-foreground">
+          The <span className="text-primary">Glory</span> Years
         </h2>
         <p className="text-body text-muted-foreground text-center mb-16 text-lg max-w-2xl mx-auto">
           A visual journey through Dave's legendary tenure
@@ -143,7 +143,7 @@ export const GallerySection = () => {
           {galleryImages.map((image, index) => (
             <div
               key={image.id}
-              className="gallery-card preserve-3d break-inside-avoid bg-gradient-to-br from-secondary to-navy-light rounded-2xl overflow-hidden border border-border/50 hover-lift group cursor-pointer"
+              className="gallery-card preserve-3d break-inside-avoid bg-background border-2 border-border overflow-hidden hover-lift group cursor-pointer"
               style={{ transformOrigin: "center center" }}
             >
               <div className="w-full relative">
@@ -152,9 +152,9 @@ export const GallerySection = () => {
                   alt={image.alt}
                   className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-foreground text-sm font-medium">{image.alt}</p>
+                  <p className="text-background text-sm font-display uppercase tracking-wider font-semibold">{image.alt}</p>
                 </div>
               </div>
             </div>

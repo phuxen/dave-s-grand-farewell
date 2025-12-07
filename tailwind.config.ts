@@ -47,19 +47,29 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        fish: "hsl(var(--fish-orange))",
+        // Carhartt brand colors
+        carhartt: {
+          brown: "hsl(var(--carhartt-brown))",
+          tan: "hsl(var(--carhartt-tan))",
+          cream: "hsl(var(--carhartt-cream))",
+          dark: "hsl(var(--carhartt-dark))",
+          teal: "hsl(var(--carhartt-teal))",
+          gold: "hsl(var(--carhartt-gold))",
+        },
+        // Legacy aliases
+        fish: "hsl(var(--carhartt-brown))",
         navy: {
-          deep: "hsl(var(--navy-deep))",
-          light: "hsl(var(--navy-light))",
+          deep: "hsl(var(--carhartt-dark))",
+          light: "hsl(var(--carhartt-tan))",
         },
         cream: {
-          DEFAULT: "hsl(var(--cream))",
-          muted: "hsl(var(--cream-muted))",
+          DEFAULT: "hsl(var(--carhartt-cream))",
+          muted: "hsl(var(--carhartt-tan))",
         },
       },
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['Space Grotesk', 'sans-serif'],
+        display: ['Oswald', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

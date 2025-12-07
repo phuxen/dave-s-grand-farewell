@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,55 +6,72 @@
 
 @layer base {
   :root {
-    --background: 220 30% 8%;
-    --foreground: 45 30% 95%;
+    /* Carhartt-inspired palette */
+    --background: 40 25% 92%;
+    --foreground: 30 10% 15%;
 
-    --card: 220 25% 12%;
-    --card-foreground: 45 30% 95%;
+    --card: 40 20% 88%;
+    --card-foreground: 30 10% 15%;
 
-    --popover: 220 25% 12%;
-    --popover-foreground: 45 30% 95%;
+    --popover: 40 20% 88%;
+    --popover-foreground: 30 10% 15%;
 
-    --primary: 25 95% 55%;
-    --primary-foreground: 220 30% 8%;
+    /* Carhartt Brown */
+    --primary: 30 60% 35%;
+    --primary-foreground: 40 25% 95%;
 
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 45 30% 95%;
+    /* Dark Teal accent */
+    --secondary: 175 50% 20%;
+    --secondary-foreground: 40 25% 95%;
 
-    --muted: 220 20% 15%;
-    --muted-foreground: 220 15% 55%;
+    --muted: 40 15% 80%;
+    --muted-foreground: 30 10% 40%;
 
-    --accent: 25 95% 55%;
-    --accent-foreground: 220 30% 8%;
+    /* Carhartt Gold/Yellow accent */
+    --accent: 45 90% 50%;
+    --accent-foreground: 30 10% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 45%;
+    --destructive-foreground: 40 25% 95%;
 
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 25 95% 55%;
+    --border: 30 15% 70%;
+    --input: 30 15% 75%;
+    --ring: 30 60% 35%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    /* Custom tokens */
-    --fish-orange: 25 95% 55%;
-    --navy-deep: 220 30% 8%;
-    --navy-light: 220 25% 15%;
-    --cream: 45 30% 95%;
-    --cream-muted: 45 20% 75%;
+    /* Custom tokens - Carhartt style */
+    --carhartt-brown: 30 60% 35%;
+    --carhartt-tan: 35 40% 75%;
+    --carhartt-cream: 40 25% 92%;
+    --carhartt-dark: 30 10% 15%;
+    --carhartt-teal: 175 50% 20%;
+    --carhartt-gold: 45 90% 50%;
 
     /* Typography */
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Space Grotesk', sans-serif;
+    --font-display: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
 
     /* Animations */
-    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
-    --background: 220 30% 8%;
-    --foreground: 45 30% 95%;
+    --background: 30 10% 12%;
+    --foreground: 40 25% 92%;
+
+    --card: 30 10% 18%;
+    --card-foreground: 40 25% 92%;
+
+    --popover: 30 10% 18%;
+    --popover-foreground: 40 25% 92%;
+
+    --muted: 30 10% 25%;
+    --muted-foreground: 40 15% 60%;
+
+    --border: 30 10% 25%;
+    --input: 30 10% 25%;
   }
 }
 
@@ -74,12 +91,16 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 }
 
 @layer components {
   .text-display {
     font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   .text-body {
@@ -87,28 +108,28 @@
   }
 
   .text-hero {
-    @apply text-display font-black tracking-tight leading-none;
-    font-size: clamp(4rem, 18vw, 16rem);
+    @apply text-display font-bold tracking-wide leading-none;
+    font-size: clamp(4rem, 18vw, 14rem);
   }
 
   .text-section {
-    @apply text-display font-bold;
-    font-size: clamp(2.5rem, 8vw, 6rem);
+    @apply text-display font-bold tracking-wide;
+    font-size: clamp(2.5rem, 8vw, 5rem);
   }
 
   .text-stat {
-    @apply text-display font-black;
-    font-size: clamp(3rem, 10vw, 8rem);
+    @apply text-display font-bold;
+    font-size: clamp(3rem, 10vw, 7rem);
   }
 
   .text-quote {
-    @apply text-display italic;
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    @apply text-body font-medium;
+    font-size: clamp(1.25rem, 3vw, 2rem);
   }
 
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--cream)) 0%, hsl(var(--primary)) 100%);
+    background-image: linear-gradient(135deg, hsl(var(--carhartt-brown)) 0%, hsl(var(--carhartt-gold)) 100%);
   }
 
   .fish-float {
@@ -124,15 +145,30 @@
   }
 
   .hover-lift {
-    @apply transition-transform duration-500;
+    @apply transition-all duration-300;
   }
 
   .hover-lift:hover {
-    transform: translateY(-10px) rotate(2deg);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px -8px hsl(var(--carhartt-dark) / 0.3);
   }
 
   .card-glass {
-    @apply bg-secondary/50 backdrop-blur-md border border-border/50 rounded-2xl;
+    @apply bg-card border-2 border-border;
+  }
+
+  /* Carhartt-style button */
+  .btn-carhartt {
+    @apply px-6 py-3 bg-primary text-primary-foreground font-display uppercase tracking-wider font-semibold border-2 border-primary transition-all duration-300;
+  }
+
+  .btn-carhartt:hover {
+    @apply bg-transparent text-primary;
+  }
+
+  /* Rugged border style */
+  .border-rugged {
+    border: 3px solid hsl(var(--carhartt-brown));
   }
 }
 
@@ -195,20 +231,20 @@
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Carhartt style */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--navy-deep));
+  background: hsl(var(--carhartt-cream));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary));
-  border-radius: 4px;
+  background: hsl(var(--carhartt-brown));
+  border: 2px solid hsl(var(--carhartt-cream));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary) / 0.8);
+  background: hsl(var(--carhartt-teal));
 }
