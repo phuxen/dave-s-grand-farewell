@@ -8,11 +8,11 @@ import head3 from "@/assets/heads/head_3.png";
 import head5 from "@/assets/heads/head_5.jpeg";
 
 const teamMembers = [
-  { name: "Team 1", delay: 0, image: head1, left: "5%", top: "12%" },
-  { name: "Team 2", delay: 0.2, image: head2, left: "75%", top: "8%" },
-  { name: "Team 3", delay: 0.4, image: head3, left: "85%", top: "55%" },
-  { name: "Team 4", delay: 0.6, image: teamMemberNew, left: "8%", top: "60%" },
-  { name: "Team 5", delay: 0.8, image: head5, left: "45%", top: "75%" },
+  { name: "Team 1", delay: 0, image: head1, left: "5%", top: "12%", animation: "animate-float" },
+  { name: "Team 2", delay: 0.2, image: head2, left: "75%", top: "8%", animation: "animate-float-alt" },
+  { name: "Team 3", delay: 0.4, image: head3, left: "85%", top: "55%", animation: "animate-float-slow" },
+  { name: "Team 4", delay: 0.6, image: teamMemberNew, left: "8%", top: "60%", animation: "animate-float-fast" },
+  { name: "Team 5", delay: 0.8, image: head5, left: "45%", top: "75%", animation: "animate-float-alt" },
 ];
 
 export const HeroSection = () => {
@@ -98,7 +98,7 @@ export const HeroSection = () => {
         {teamMembers.map((member) => (
           <div
             key={member.name}
-            className="floating-head absolute w-28 h-28 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-gradient-to-br from-primary/30 to-secondary border-3 border-primary/50 flex items-center justify-center text-foreground font-body text-xs md:text-sm animate-float overflow-hidden shadow-xl"
+            className={`floating-head absolute w-28 h-28 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-gradient-to-br from-primary/30 to-secondary border-3 border-primary/50 flex items-center justify-center text-foreground font-body text-xs md:text-sm ${member.animation} overflow-hidden shadow-xl`}
             style={{
               left: member.left,
               top: member.top,
