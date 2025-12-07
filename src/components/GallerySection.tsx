@@ -14,6 +14,14 @@ import gallery7 from "@/assets/gallery/Dave_DP.jpeg";
 import gallery8 from "@/assets/gallery/DP_and_espresso.jpeg";
 import gallery9 from "@/assets/gallery/DP_and_screen.jpeg";
 import gallery10 from "@/assets/gallery/DP_the_gardener_with_his_team_1.jpeg";
+import gallery11 from "@/assets/gallery/DAN_1_1.jpeg";
+import gallery12 from "@/assets/gallery/Dave_on_the_couch.jpeg";
+import gallery13 from "@/assets/gallery/Denim_DP.jpeg";
+import gallery14 from "@/assets/gallery/DP_cow.jpeg";
+import gallery15 from "@/assets/gallery/IMG_5316.jpeg";
+import gallery16 from "@/assets/gallery/IMG_5909_1.jpeg";
+import gallery17 from "@/assets/gallery/Image_2.jpeg";
+import gallery18 from "@/assets/gallery/Image_1.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,6 +36,14 @@ const galleryImages = [
   { id: 8, src: gallery8, alt: "Espresso martini time" },
   { id: 9, src: gallery9, alt: "Meeting mode" },
   { id: 10, src: gallery10, alt: "Team outing" },
+  { id: 11, src: gallery11, alt: "Christmas team photo" },
+  { id: 12, src: gallery12, alt: "Couch nap time" },
+  { id: 13, src: gallery13, alt: "Double denim vibes" },
+  { id: 14, src: gallery14, alt: "Cow costume legend" },
+  { id: 15, src: gallery15, alt: "Evening chill" },
+  { id: 16, src: gallery16, alt: "The matching duo" },
+  { id: 17, src: gallery17, alt: "Tropical party" },
+  { id: 18, src: gallery18, alt: "Bowling night" },
 ];
 
 export const GallerySection = () => {
