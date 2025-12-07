@@ -31,6 +31,11 @@ const messages = [
     author: "Billy",
     role: "",
   },
+  {
+    quote: "DAVE BOO. I WILL MISS YOUR SASSY, CHAOTIC, STRATEGIC MEGA-BRAIN AURA that you bring daily into our work lives. A leader who is enduring, empathetic, charismatic, full of knowledge, with the occasional dodgy wisdom. I've learnt a lot from you. YOU ARE HIM. The incredible impact you've had here at DAN is monumental! Wherever your next journey takes you, I just know you'll turn up just as chaotic as you arrived here, HA! Go well, enjoy your time with Leo, such an amazing adventure to take. I'll be nagging you forever. LIFE COACH. BIG BRO. Big hugs, little kiss, BIGGER HUGS. Ofa atu.",
+    author: "Naua",
+    role: "",
+  },
 ];
 
 const animations = [
