@@ -36,6 +36,11 @@ const messages = [
     author: "Naua",
     role: "",
   },
+  {
+    quote: "Its amazing what you are doing, but I am super sad to see you go. I can't begin to express how much of an impact you had and how much you will be missed. To say it has been a pleasure is an understatement - thank you so much for everything!",
+    author: "Lelane",
+    role: "",
+  },
 ];
 
 const animations = [
