@@ -22,7 +22,7 @@ const messages = [
     role: "",
   },
   {
-    quote: "Yo Dave Bro, been a blast working with you - go forth and conquer life with your awesome family. They will love having you around - just like we did. Your energetic, intelligent, funny, strategic and caring personality will bring out the best in them - just like it did for us. Thanks for all you did to make work life valuable, insightful and a good time for all of us. I will miss you! Look forward to a beer in the new year. Chur, love & hugs.",
+    quote: "Yo Dave Bro, been a blast working with you - go forth and conquer life with your awesome family 🫶 They will love having you around - just like we did 💯 Your energetic, intelligent, funny, strategic and caring personality will bring out the best in them - just like it did for us 🤩 Thanks for all you did to make work life valuable, insightful and a good time for all of us. I will miss you! Look forward to a beer in the new year 🍻 Chur, love & hugs.",
     author: "Heids",
     role: "",
   },
