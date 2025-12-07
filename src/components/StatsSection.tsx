@@ -107,7 +107,7 @@ export const StatsSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="stat-card card-glass p-8 text-center hover-lift"
+              className="stat-card bg-card border-2 border-border p-8 text-center hover-lift rounded-sm"
             >
               <div className="text-stat text-primary mb-2">
                 <AnimatedCounter
@@ -116,7 +116,7 @@ export const StatsSection = () => {
                   isVisible={isVisible}
                 />
               </div>
-              <p className="text-body text-foreground/80 text-lg">
+              <p className="text-body text-foreground text-lg">
                 {stat.label}
               </p>
             </div>
