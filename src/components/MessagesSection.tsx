@@ -72,6 +72,12 @@ const messages = [
     author: "Mona",
     role: "",
   },
+  {
+    quote:
+      "Thanks for the flexibility you provided during my time here — it made studying and managing family responsibilities easier. Wishing you all the best ahead.",
+    author: "Ram",
+    role: "",
+  },
 ];
 
 const animations = [
