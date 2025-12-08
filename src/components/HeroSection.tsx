@@ -6,6 +6,7 @@ import head1 from "@/assets/heads/head_1.png";
 import head2 from "@/assets/heads/head_2.png";
 import head3 from "@/assets/heads/head_3.png";
 import head5 from "@/assets/heads/head_5.jpeg";
+import head6 from "@/assets/heads/head_6.jpeg";
 
 const teamMembers = [
   { name: "Team 1", delay: 0, image: head1, left: "5%", top: "12%", animation: "animate-float" },
@@ -13,6 +14,7 @@ const teamMembers = [
   { name: "Team 3", delay: 0.4, image: head3, left: "85%", top: "55%", animation: "animate-float-slow" },
   { name: "Team 4", delay: 0.6, image: teamMemberNew, left: "8%", top: "60%", animation: "animate-float-fast" },
   { name: "Team 5", delay: 0.8, image: head5, left: "45%", top: "75%", animation: "animate-float-alt" },
+  { name: "Team 6", delay: 1.0, image: head6, left: "90%", top: "30%", animation: "animate-float-slow" },
 ];
 
 export const HeroSection = () => {
