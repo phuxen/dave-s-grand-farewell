@@ -66,6 +66,12 @@ const messages = [
     author: "Trudi",
     role: "",
   },
+  {
+    quote:
+      "Hi Dave, time has flown by, and even though it's only been a year, working with you has been genuinely special. You're an exceptional leader, the kind that's rare to come across, and you've planted something meaningful in everyone's heart. Wishing you nothing but success and joy in your next chapter.",
+    author: "Mona",
+    role: "",
+  },
 ];
 
 const animations = [
