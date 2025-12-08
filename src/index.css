@@ -6,47 +6,47 @@
 
 @layer base {
   :root {
-    /* Sassy vibrant palette */
-    --background: 320 30% 10%;
-    --foreground: 60 100% 97%;
+    /* Carhartt-inspired palette */
+    --background: 40 25% 92%;
+    --foreground: 30 10% 15%;
 
-    --card: 320 35% 15%;
-    --card-foreground: 60 100% 97%;
+    --card: 40 20% 88%;
+    --card-foreground: 30 10% 15%;
 
-    --popover: 320 35% 15%;
-    --popover-foreground: 60 100% 97%;
+    --popover: 40 20% 88%;
+    --popover-foreground: 30 10% 15%;
 
-    /* Hot Pink primary */
-    --primary: 330 85% 60%;
-    --primary-foreground: 320 30% 10%;
+    /* Carhartt Brown */
+    --primary: 30 60% 35%;
+    --primary-foreground: 40 25% 95%;
 
-    /* Electric Cyan accent */
-    --secondary: 185 100% 50%;
-    --secondary-foreground: 320 30% 10%;
+    /* Dark Teal accent */
+    --secondary: 175 50% 20%;
+    --secondary-foreground: 40 25% 95%;
 
-    --muted: 320 25% 25%;
-    --muted-foreground: 320 20% 70%;
+    --muted: 40 15% 80%;
+    --muted-foreground: 30 10% 40%;
 
-    /* Vibrant Yellow accent */
-    --accent: 50 100% 55%;
-    --accent-foreground: 320 30% 10%;
+    /* Carhartt Gold/Yellow accent */
+    --accent: 45 90% 50%;
+    --accent-foreground: 30 10% 15%;
 
-    --destructive: 0 85% 55%;
-    --destructive-foreground: 60 100% 97%;
+    --destructive: 0 84.2% 45%;
+    --destructive-foreground: 40 25% 95%;
 
-    --border: 330 60% 40%;
-    --input: 320 30% 25%;
-    --ring: 330 85% 60%;
+    --border: 30 15% 70%;
+    --input: 30 15% 75%;
+    --ring: 30 60% 35%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    /* Custom tokens - Sassy style */
-    --carhartt-brown: 330 85% 60%;
-    --carhartt-tan: 50 100% 55%;
-    --carhartt-cream: 60 100% 97%;
-    --carhartt-dark: 320 30% 10%;
-    --carhartt-teal: 185 100% 50%;
-    --carhartt-gold: 50 100% 55%;
+    /* Custom tokens - Carhartt style */
+    --carhartt-brown: 30 60% 35%;
+    --carhartt-tan: 35 40% 75%;
+    --carhartt-cream: 40 25% 92%;
+    --carhartt-dark: 30 10% 15%;
+    --carhartt-teal: 175 50% 20%;
+    --carhartt-gold: 45 90% 50%;
 
     /* Typography */
     --font-display: 'Oswald', sans-serif;
@@ -58,20 +58,20 @@
   }
 
   .dark {
-    --background: 320 30% 8%;
-    --foreground: 60 100% 97%;
+    --background: 30 10% 12%;
+    --foreground: 40 25% 92%;
 
-    --card: 320 35% 12%;
-    --card-foreground: 60 100% 97%;
+    --card: 30 10% 18%;
+    --card-foreground: 40 25% 92%;
 
-    --popover: 320 35% 12%;
-    --popover-foreground: 60 100% 97%;
+    --popover: 30 10% 18%;
+    --popover-foreground: 40 25% 92%;
 
-    --muted: 320 25% 20%;
-    --muted-foreground: 320 20% 65%;
+    --muted: 30 10% 25%;
+    --muted-foreground: 40 15% 60%;
 
-    --border: 330 60% 35%;
-    --input: 320 30% 20%;
+    --border: 30 10% 25%;
+    --input: 30 10% 25%;
   }
 }
 
@@ -129,7 +129,7 @@
 
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 50%, hsl(var(--secondary)) 100%);
+    background-image: linear-gradient(135deg, hsl(var(--carhartt-brown)) 0%, hsl(var(--carhartt-gold)) 100%);
   }
 
   .fish-float {
@@ -231,20 +231,20 @@
   }
 }
 
-/* Custom scrollbar - Sassy style */
+/* Custom scrollbar - Carhartt style */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--background));
+  background: hsl(var(--carhartt-cream));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary));
-  border: 2px solid hsl(var(--background));
+  background: hsl(var(--carhartt-brown));
+  border: 2px solid hsl(var(--carhartt-cream));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--secondary));
+  background: hsl(var(--carhartt-teal));
 }
