@@ -60,6 +60,12 @@ const messages = [
     author: "Hux",
     role: "",
   },
+  {
+    quote:
+      "Dave, working with you has been equal parts education and entertainment, your daily tasks delivered with the confidence of a man who genuinely believes in Arsenal's title chances. Few professional relationships survive 18 drinks at cruising altitude, but somehow ours did, albeit with HR involved…\n\nMurph and I remain unwavering in our devotion to Fi, the only stabilising force in your household. Thanks for teaching me what to do, what not to do, and when to pretend I didn't see anything at all. Wishing you luck in your next chapter with Leo, where I know you'll continue to create chaos, dodge accountability on the golf course, and venture far & wide, maybe Ibiza?",
+    author: "Trudi",
+    role: "",
+  },
 ];
 
 const animations = [
