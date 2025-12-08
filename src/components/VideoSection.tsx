@@ -52,26 +52,40 @@ export const VideoSection = () => {
           The moments that made us laugh, cry, and question HR policies
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="video-container aspect-video bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 relative hover-lift">
-            <video
-              className="w-full h-full object-cover"
-              controls
-              playsInline
-            >
+            <video className="w-full h-full object-cover" controls playsInline>
               <source src="/videos/IMG_5576.MOV" type="video/quicktime" />
-              Your browser does not support the video tag.
             </video>
           </div>
 
           <div className="video-container aspect-video bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 relative hover-lift">
-            <video
-              className="w-full h-full object-cover"
-              controls
-              playsInline
-            >
+            <video className="w-full h-full object-cover" controls playsInline>
               <source src="/videos/IMG_1083.MOV" type="video/quicktime" />
-              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div className="video-container aspect-video bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 relative hover-lift">
+            <video className="w-full h-full object-cover" controls playsInline>
+              <source src="/videos/MicrosoftTeams-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container aspect-video bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 relative hover-lift">
+            <video className="w-full h-full object-cover" controls playsInline>
+              <source src="/videos/MicrosoftTeams-video_1.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container aspect-video bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 relative hover-lift">
+            <video className="w-full h-full object-cover" controls playsInline>
+              <source src="/videos/MicrosoftTeams-video_2.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container aspect-video bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 relative hover-lift">
+            <video className="w-full h-full object-cover" controls playsInline>
+              <source src="/videos/MicrosoftTeams-video_3.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
