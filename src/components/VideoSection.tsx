@@ -52,16 +52,10 @@ export const VideoSection = () => {
           The moments that made us laugh, cry, and question HR policies
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
             <video className="w-full h-auto" controls playsInline>
-              <source src="/videos/IMG_5576.MOV" type="video/quicktime" />
-            </video>
-          </div>
-
-          <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
-            <video className="w-full h-auto" controls playsInline>
-              <source src="/videos/IMG_1083.MOV" type="video/quicktime" />
+              <source src="/videos/MicrosoftTeams-video.mp4" type="video/mp4" />
             </video>
           </div>
 
