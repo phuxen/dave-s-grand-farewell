@@ -2,6 +2,28 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import introHero from "@/assets/intro-hero.png";
 
+const Snowflake = ({ style }: { style: React.CSSProperties }) => (
+  <div
+    className="absolute text-white pointer-events-none animate-snowfall opacity-80"
+    style={style}
+  >
+    ❄
+  </div>
+);
+
+const generateSnowflakes = (count: number) => {
+  return Array.from({ length: count }, (_, i) => ({
+    id: i,
+    left: `${Math.random() * 100}%`,
+    animationDuration: `${Math.random() * 5 + 5}s`,
+    animationDelay: `${Math.random() * 5}s`,
+    fontSize: `${Math.random() * 1.5 + 0.5}rem`,
+    opacity: Math.random() * 0.6 + 0.4,
+  }));
+};
+
+const snowflakes = generateSnowflakes(50);
+
 export const IntroSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -38,6 +60,22 @@ export const IntroSection = () => {
           ref={overlayRef}
           className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"
         />
+      </div>
+
+      {/* Falling Snow */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {snowflakes.map((flake) => (
+          <Snowflake
+            key={flake.id}
+            style={{
+              left: flake.left,
+              animationDuration: flake.animationDuration,
+              animationDelay: flake.animationDelay,
+              fontSize: flake.fontSize,
+              opacity: flake.opacity,
+            }}
+          />
+        ))}
       </div>
 
       {/* Content */}
