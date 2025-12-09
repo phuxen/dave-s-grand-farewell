@@ -150,6 +150,80 @@ export const SongSection = () => {
             <span>{formatTime(duration)}</span>
           </div>
         </div>
+
+        {/* Lyrics */}
+        <div className="max-w-2xl mx-auto mt-12 bg-background/60 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-border">
+          <h3 className="font-display text-2xl text-center text-foreground uppercase tracking-wider mb-6">Lyrics</h3>
+          <div className="space-y-6 text-center text-foreground/90 leading-relaxed">
+            <div>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">[Verse 1]</p>
+              <p>Oh Parko the bold</p>
+              <p>A fisherman's pride</p>
+              <p>With a rod in his hand and the tide as his guide</p>
+              <p>He casts out his line</p>
+              <p>Where the big ones hide</p>
+              <p>And laughs like the devil when the waves collide</p>
+            </div>
+
+            <div>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">[Chorus]</p>
+              <p>Parko oh Parko</p>
+              <p>King of the sea</p>
+              <p>With a tale on his tongue and a pint for his spree</p>
+              <p>Eighteen ales at cruising</p>
+              <p>A record to see</p>
+              <p>Oh Parko</p>
+              <p>You legend</p>
+              <p>Forever you'll be</p>
+            </div>
+
+            <div>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">[Verse 2]</p>
+              <p>He once hooked a whale—or so he will say</p>
+              <p>With a wink and a grin</p>
+              <p>He can talk all day</p>
+              <p>HR on the line</p>
+              <p>His calls on replay</p>
+              <p>"Just one more beer</p>
+              <p>Then I'll be on my way!"</p>
+            </div>
+
+            <div>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">[Chorus]</p>
+              <p>Parko oh Parko</p>
+              <p>King of the sea</p>
+              <p>With a tale on his tongue and a pint for his spree</p>
+              <p>Eighteen ales at cruising</p>
+              <p>A record to see</p>
+              <p>Oh Parko</p>
+              <p>You legend</p>
+              <p>Forever you'll be</p>
+            </div>
+
+            <div>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">[Bridge]</p>
+              <p>When the sun dips low and the fish stop their fight</p>
+              <p>Parko grabs his pint</p>
+              <p>Oh what a sight</p>
+              <p>A crisp golden lager</p>
+              <p>His heart's delight</p>
+              <p>He raises it high</p>
+              <p>To the stars of the night</p>
+            </div>
+
+            <div>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">[Chorus]</p>
+              <p>Parko oh Parko</p>
+              <p>King of the sea</p>
+              <p>With a tale on his tongue and a pint for his spree</p>
+              <p>Eighteen ales at cruising</p>
+              <p>A record to see</p>
+              <p>Oh Parko</p>
+              <p>You legend</p>
+              <p>Forever you'll be</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
