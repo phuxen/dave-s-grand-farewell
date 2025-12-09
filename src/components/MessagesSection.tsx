@@ -78,6 +78,11 @@ const messages = [
     author: "Ram",
     role: "",
   },
+  {
+    quote: "Auf Wiedersehen",
+    author: "Nicole",
+    role: "",
+  },
 ];
 
 const animations = [
