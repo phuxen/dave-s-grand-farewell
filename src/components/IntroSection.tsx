@@ -30,20 +30,20 @@ const teamMembers = [
   // Top right (reduced)
   { name: "Team 6", delay: 0.6, image: head6, left: "75%", top: "5%", animation: "animate-float" },
   // Left side middle
-  { name: "Team 7", delay: 0.8, image: head7, left: "3%", top: "28%", animation: "animate-float-alt" },
-  { name: "Team 4", delay: 1.0, image: teamMemberNew, left: "5%", top: "52%", animation: "animate-float" },
-  { name: "Team 13", delay: 1.2, image: head13, left: "2%", top: "75%", animation: "animate-float-slow" },
+  { name: "Team 7", delay: 0.8, image: head7, left: "3%", top: "25%", animation: "animate-float-alt" },
+  { name: "Team 4", delay: 1.0, image: teamMemberNew, left: "5%", top: "45%", animation: "animate-float" },
+  { name: "Team 13", delay: 1.2, image: head13, left: "2%", top: "62%", animation: "animate-float-slow" },
   // Center area
-  { name: "Team 10", delay: 1.4, image: head10, left: "28%", top: "35%", animation: "animate-float-fast" },
-  { name: "Team 2", delay: 1.6, image: head2, left: "55%", top: "18%", animation: "animate-float-alt" },
-  { name: "Team 14", delay: 1.8, image: head14, left: "45%", top: "55%", animation: "animate-float-slow" },
+  { name: "Team 10", delay: 1.4, image: head10, left: "28%", top: "30%", animation: "animate-float-fast" },
+  { name: "Team 2", delay: 1.6, image: head2, left: "55%", top: "15%", animation: "animate-float-alt" },
+  { name: "Team 14", delay: 1.8, image: head14, left: "45%", top: "45%", animation: "animate-float-slow" },
   // Right side
-  { name: "Team 3", delay: 2.0, image: head3, left: "78%", top: "35%", animation: "animate-float-fast" },
-  { name: "Team 9", delay: 2.2, image: head9, left: "80%", top: "60%", animation: "animate-float" },
-  // Bottom area
-  { name: "Team 8", delay: 2.4, image: head8, left: "20%", top: "68%", animation: "animate-float-alt" },
-  { name: "Team 5", delay: 2.6, image: head5, left: "38%", top: "78%", animation: "animate-float-slow" },
-  { name: "Team 12", delay: 2.8, image: head12, left: "65%", top: "75%", animation: "animate-float-fast" },
+  { name: "Team 3", delay: 2.0, image: head3, left: "78%", top: "28%", animation: "animate-float-fast" },
+  { name: "Team 9", delay: 2.2, image: head9, left: "80%", top: "50%", animation: "animate-float" },
+  // Bottom area (moved up)
+  { name: "Team 8", delay: 2.4, image: head8, left: "20%", top: "55%", animation: "animate-float-alt" },
+  { name: "Team 5", delay: 2.6, image: head5, left: "38%", top: "62%", animation: "animate-float-slow" },
+  { name: "Team 12", delay: 2.8, image: head12, left: "65%", top: "60%", animation: "animate-float-fast" },
 ];
 
 const Snowflake = ({ style }: { style: React.CSSProperties }) => (
