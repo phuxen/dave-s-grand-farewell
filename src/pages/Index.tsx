@@ -6,6 +6,7 @@ import { StatsSection } from "@/components/StatsSection";
 import { GallerySection } from "@/components/GallerySection";
 import { MessagesSection } from "@/components/MessagesSection";
 import { VideoSection } from "@/components/VideoSection";
+import { SongSection } from "@/components/SongSection";
 import { FooterSection } from "@/components/FooterSection";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -27,6 +28,7 @@ const Index = () => {
       <GallerySection />
       <MessagesSection />
       <VideoSection />
+      <SongSection />
       <FooterSection />
     </main>
   );
