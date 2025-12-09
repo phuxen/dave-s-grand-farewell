@@ -100,28 +100,23 @@ export const IntroSection = () => {
         delay: 0.8,
       });
 
-      // Scroll-triggered parallax for floating heads - varying speeds create depth
+      // Scroll-triggered parallax for floating heads
       const heads = gsap.utils.toArray<HTMLElement>(".floating-head");
       heads.forEach((head, index) => {
-        // Create varying parallax speeds based on position
-        const depth = (index % 5) + 1; // 1-5 depth layers
-        const ySpeed = 100 + (depth * 80); // Faster = further back
-        const xSpeed = (index % 2 === 0 ? 1 : -1) * (20 + depth * 15);
-        const rotationAmount = (index % 2 === 0 ? 1 : -1) * (5 + depth * 5);
-        const scaleEnd = 1 - (depth * 0.08);
+        const direction = index % 2 === 0 ? 1 : -1;
+        const speed = 50 + (index % 3) * 30;
         
         gsap.to(head, {
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top top",
             end: "bottom top",
-            scrub: 0.5 + (depth * 0.2), // Smoother scrub for distant objects
+            scrub: 1,
           },
-          y: ySpeed,
-          x: xSpeed,
-          rotation: rotationAmount,
-          scale: scaleEnd,
-          opacity: 0.3,
+          y: direction * speed,
+          x: direction * (speed * 0.5),
+          rotation: direction * 15,
+          scale: 0.8,
           ease: "none",
         });
       });
