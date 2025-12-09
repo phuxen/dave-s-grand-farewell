@@ -52,13 +52,7 @@ export const VideoSection = () => {
           The moments that made us laugh, cry, and question HR policies
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-          <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
-            <video className="w-full h-auto" controls playsInline>
-              <source src="/videos/MicrosoftTeams-video.mp4" type="video/mp4" />
-            </video>
-          </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
             <video className="w-full h-auto" controls playsInline>
               <source src="/videos/MicrosoftTeams-video.mp4" type="video/mp4" />
@@ -80,6 +74,54 @@ export const VideoSection = () => {
           <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
             <video className="w-full h-auto" controls playsInline>
               <source src="/videos/MicrosoftTeams-video_3.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
+            <video className="w-full h-auto" controls playsInline>
+              <source src="/videos/IMG_5572_1.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
+            <video className="w-full h-auto" controls playsInline>
+              <source src="/videos/IMG_5555_1.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
+            <video className="w-full h-auto" controls playsInline>
+              <source src="/videos/IMG_5539.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
+            <video className="w-full h-auto" controls playsInline>
+              <source src="/videos/IMG_4484.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
+            <video className="w-full h-auto" controls playsInline>
+              <source src="/videos/IMG_4135.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
+            <video className="w-full h-auto" controls playsInline>
+              <source src="/videos/IMG_1083.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
+            <video className="w-full h-auto" controls playsInline>
+              <source src="/videos/IMG_0939.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="video-container bg-gradient-to-br from-secondary to-navy-light rounded-3xl overflow-hidden border border-border/50 hover-lift">
+            <video className="w-full h-auto" controls playsInline>
+              <source src="/videos/IMG_0122_2.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
