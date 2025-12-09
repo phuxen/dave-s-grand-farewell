@@ -12,6 +12,11 @@ import head7 from "@/assets/heads/head_7.png";
 import head8 from "@/assets/heads/head_8.png";
 import head9 from "@/assets/heads/head_9.png";
 import head10 from "@/assets/heads/head_10.png";
+import head11 from "@/assets/heads/head_11.png";
+import head12 from "@/assets/heads/head_12.png";
+import head13 from "@/assets/heads/head_13.png";
+import head14 from "@/assets/heads/head_14.png";
+import head15 from "@/assets/heads/head_15.png";
 
 const teamMembers = [
   { name: "Team 1", delay: 0, image: head1, left: "2%", top: "5%", animation: "animate-float" },
@@ -24,6 +29,11 @@ const teamMembers = [
   { name: "Team 8", delay: 1.4, image: head8, left: "60%", top: "65%", animation: "animate-float-fast" },
   { name: "Team 9", delay: 1.6, image: head9, left: "85%", top: "60%", animation: "animate-float-alt" },
   { name: "Team 10", delay: 1.8, image: head10, left: "25%", top: "40%", animation: "animate-float-slow" },
+  { name: "Team 11", delay: 2.0, image: head11, left: "45%", top: "20%", animation: "animate-float" },
+  { name: "Team 12", delay: 2.2, image: head12, left: "70%", top: "75%", animation: "animate-float-fast" },
+  { name: "Team 13", delay: 2.4, image: head13, left: "10%", top: "75%", animation: "animate-float-alt" },
+  { name: "Team 14", delay: 2.6, image: head14, left: "50%", top: "50%", animation: "animate-float-slow" },
+  { name: "Team 15", delay: 2.8, image: head15, left: "30%", top: "10%", animation: "animate-float" },
 ];
 
 const Snowflake = ({ style }: { style: React.CSSProperties }) => (
