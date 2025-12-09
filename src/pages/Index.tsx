@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { IntroSection } from "@/components/IntroSection";
-import { HeroSection } from "@/components/HeroSection";
 import { StatsSection } from "@/components/StatsSection";
 import { GallerySection } from "@/components/GallerySection";
 import { MessagesSection } from "@/components/MessagesSection";
@@ -24,7 +23,6 @@ const Index = () => {
   return (
     <main className="bg-background min-h-screen overflow-x-hidden">
       <IntroSection />
-      <HeroSection />
       <StatsSection />
       <GallerySection />
       <MessagesSection />
