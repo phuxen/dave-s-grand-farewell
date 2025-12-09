@@ -8,6 +8,9 @@ import head2 from "@/assets/heads/head_2.png";
 import head3 from "@/assets/heads/head_3.png";
 import head5 from "@/assets/heads/head_5.jpeg";
 import head6 from "@/assets/heads/head_6.jpeg";
+import head7 from "@/assets/heads/head_7.png";
+import head8 from "@/assets/heads/head_8.png";
+import head9 from "@/assets/heads/head_9.png";
 
 const teamMembers = [
   { name: "Team 1", delay: 0, image: head1, left: "2%", top: "5%", animation: "animate-float" },
@@ -16,6 +19,9 @@ const teamMembers = [
   { name: "Team 4", delay: 0.6, image: teamMemberNew, left: "5%", top: "50%", animation: "animate-float-fast" },
   { name: "Team 5", delay: 0.8, image: head5, left: "35%", top: "70%", animation: "animate-float-alt" },
   { name: "Team 6", delay: 1.0, image: head6, left: "80%", top: "15%", animation: "animate-float-slow" },
+  { name: "Team 7", delay: 1.2, image: head7, left: "15%", top: "25%", animation: "animate-float" },
+  { name: "Team 8", delay: 1.4, image: head8, left: "60%", top: "65%", animation: "animate-float-fast" },
+  { name: "Team 9", delay: 1.6, image: head9, left: "85%", top: "60%", animation: "animate-float-alt" },
 ];
 
 const Snowflake = ({ style }: { style: React.CSSProperties }) => (
