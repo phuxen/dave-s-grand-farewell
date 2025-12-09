@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FloatingFish } from "./FloatingFish";
+import { GalleryLightbox } from "./GalleryLightbox";
 
 // Gallery images
 import gallery1 from "@/assets/gallery/DP_HM_AT.jpeg";
@@ -67,6 +68,21 @@ const galleryImages = [
 export const GallerySection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const handleImageClick = (index: number) => {
+    setSelectedImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const handlePrevious = () => {
+    setSelectedImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImages.length - 1));
+  };
+
+  const handleNext = () => {
+    setSelectedImageIndex((prev) => (prev < galleryImages.length - 1 ? prev + 1 : 0));
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -147,6 +163,7 @@ export const GallerySection = () => {
               key={image.id}
               className="gallery-card preserve-3d break-inside-avoid bg-background border-2 border-border overflow-hidden hover-lift group cursor-pointer"
               style={{ transformOrigin: "center center" }}
+              onClick={() => handleImageClick(index)}
             >
               <div className="w-full relative">
                 <img
@@ -162,6 +179,17 @@ export const GallerySection = () => {
             </div>
           ))}
         </div>
+
+        <GalleryLightbox
+          isOpen={lightboxOpen}
+          onClose={() => setLightboxOpen(false)}
+          imageSrc={galleryImages[selectedImageIndex].src}
+          imageAlt={galleryImages[selectedImageIndex].alt}
+          onPrevious={handlePrevious}
+          onNext={handleNext}
+          hasPrevious={true}
+          hasNext={true}
+        />
       </div>
     </section>
   );
