@@ -30,6 +30,7 @@ import gallery23 from "@/assets/gallery/Boat_party.jpeg";
 import gallery24 from "@/assets/gallery/Squad_goals.jpeg";
 import gallery25 from "@/assets/gallery/Sunset_crew.jpeg";
 import gallery26 from "@/assets/gallery/Sandal_swagger.jpeg";
+import gallery27 from "@/assets/gallery/IMG_7092.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,6 +61,7 @@ const galleryImages = [
   { id: 24, src: gallery24, alt: "Squad goals" },
   { id: 25, src: gallery25, alt: "Sunset crew" },
   { id: 26, src: gallery26, alt: "Sandal swagger" },
+  { id: 27, src: gallery27, alt: "Pink hair party" },
 ];
 
 export const GallerySection = () => {
