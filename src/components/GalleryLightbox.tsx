@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -22,6 +23,23 @@ export const GalleryLightbox = ({
   hasPrevious = false,
   hasNext = false,
 }: GalleryLightboxProps) => {
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isOpen) return;
+      
+      if (e.key === "Escape") {
+        onClose();
+      } else if (e.key === "ArrowLeft" && hasPrevious && onPrevious) {
+        onPrevious();
+      } else if (e.key === "ArrowRight" && hasNext && onNext) {
+        onNext();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen, onClose, onPrevious, onNext, hasPrevious, hasNext]);
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-none bg-transparent shadow-none">
