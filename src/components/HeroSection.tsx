@@ -9,12 +9,12 @@ import head5 from "@/assets/heads/head_5.jpeg";
 import head6 from "@/assets/heads/head_6.jpeg";
 
 const teamMembers = [
-  { name: "Team 1", delay: 0, image: head1, left: "5%", top: "12%", animation: "animate-float" },
-  { name: "Team 2", delay: 0.2, image: head2, left: "75%", top: "8%", animation: "animate-float-alt" },
-  { name: "Team 3", delay: 0.4, image: head3, left: "85%", top: "55%", animation: "animate-float-slow" },
-  { name: "Team 4", delay: 0.6, image: teamMemberNew, left: "8%", top: "60%", animation: "animate-float-fast" },
-  { name: "Team 5", delay: 0.8, image: head5, left: "45%", top: "75%", animation: "animate-float-alt" },
-  { name: "Team 6", delay: 1.0, image: head6, left: "90%", top: "30%", animation: "animate-float-slow" },
+  { name: "Team 1", delay: 0, image: head1, left: "2%", top: "5%", animation: "animate-float" },
+  { name: "Team 2", delay: 0.2, image: head2, left: "55%", top: "3%", animation: "animate-float-alt" },
+  { name: "Team 3", delay: 0.4, image: head3, left: "65%", top: "45%", animation: "animate-float-slow" },
+  { name: "Team 4", delay: 0.6, image: teamMemberNew, left: "5%", top: "50%", animation: "animate-float-fast" },
+  { name: "Team 5", delay: 0.8, image: head5, left: "35%", top: "60%", animation: "animate-float-alt" },
+  { name: "Team 6", delay: 1.0, image: head6, left: "70%", top: "20%", animation: "animate-float-slow" },
 ];
 
 export const HeroSection = () => {
