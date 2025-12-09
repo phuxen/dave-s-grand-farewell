@@ -91,7 +91,7 @@ export const StatsSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-card border-2 border-border p-8 text-center hover-lift rounded-sm"
+              className="bg-card border-2 border-border p-8 text-center hover-lift rounded-2xl"
             >
               <CountUpNumber target={stat.value} suffix={stat.suffix} />
               <p className="text-body text-foreground text-lg">
