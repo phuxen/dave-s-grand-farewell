@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import introHero from "@/assets/intro-hero.png";
+
+gsap.registerPlugin(ScrollTrigger);
 import { FloatingFish } from "./FloatingFish";
 import teamMemberNew from "@/assets/heads/team_member_new.png";
 import head1 from "@/assets/heads/head_1.png";
@@ -94,6 +97,28 @@ export const IntroSection = () => {
         ease: "power2.out",
         delay: 0.8,
       });
+
+      // Scroll-triggered parallax for floating heads
+      const heads = gsap.utils.toArray<HTMLElement>(".floating-head");
+      heads.forEach((head, index) => {
+        const direction = index % 2 === 0 ? 1 : -1;
+        const speed = 50 + (index % 3) * 30;
+        
+        gsap.to(head, {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: 1,
+          },
+          y: direction * speed,
+          x: direction * (speed * 0.5),
+          rotation: direction * 15,
+          scale: 0.8,
+          ease: "none",
+        });
+      });
+
     }, sectionRef);
 
     return () => ctx.revert();
