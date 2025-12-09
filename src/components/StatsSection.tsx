@@ -6,6 +6,7 @@ const stats = [
   { value: 3, label: "Times fell asleep in a meeting", suffix: "" },
   { value: 56943, label: "Hours streaming football in the studio", suffix: "" },
   { value: 6324, label: "Peroni's consumed", suffix: "🍺" },
+  { value: 1340000, label: "Calls to HR", suffix: "📞" },
 ];
 
 const CountUpNumber = ({ target, suffix }: { target: number; suffix: string }) => {
